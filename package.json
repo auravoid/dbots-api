@@ -1,5 +1,5 @@
 {
-  "name": "dbotsapi",
+  "name": "@void206551/dbots-api",
   "version": "1.0.0",
   "main": "dist/index.js",
   "license": "MIT",
@@ -17,5 +17,19 @@
   },
   "dependencies": {
     "node-fetch-native": "^1.0.1"
-  }
+  },
+  "types": "./dist/index.d.ts",
+  "description": "A simple wrapper for [Discord Bots](https://discord.bots.gg/) written in Typescript.",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/auravoid/dbots-api.git"
+  },
+  "author": "auravoid",
+  "bugs": {
+    "url": "https://github.com/auravoid/dbots-api/issues"
+  },
+  "homepage": "https://github.com/auravoid/dbots-api#readme"
 }
