@@ -21,10 +21,10 @@ import { getBots, getBot, postStats } from "./discord-bots-api-client";
 const bots = await getBots();
 
 // get a specific bot by ID
-const bot = await getBot(847427963032174613);
+const bot = await getBot("847427963032174613");
 
 // update bot stats
-const stats = await postStats("your-wonderful-token", 847427963032174613, 100, 1);
+const stats = await postStats("your-wonderful-token", "847427963032174613", 100, 1);
 ```
 
 ## Functions

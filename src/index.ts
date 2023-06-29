@@ -10,7 +10,7 @@ import { Bot, BotData, BotStats } from "./types";
  * @param {string} [query] - Search query
  * @param {number} [page=0] - Page number
  * @param {number} [limit=50] - Limit of bots per page
- * @param {BigInt} [authorId] - Author ID
+ * @param {string} [authorId] - Author ID
  * @param {string} [authorName] - Author Name
  * @param {boolean} [unverified] - Unverified bots
  * @param {string} [lib] - Library
@@ -22,7 +22,7 @@ export async function getBots(
   query: string,
   page: number = 0,
   limit: number = 50,
-  authorId?: BigInt,
+  authorId?: string,
   authorName?: string,
   unverified: boolean = false,
   lib?: string,
@@ -61,10 +61,10 @@ export async function getBots(
 /**
  * @name getBot
  * @description Get a bot
- * @param {BigInt} id - Bot ID
+ * @param {string} id - Bot ID
  * @returns {Promise<Bot>}
  */
-export async function getBot(id: BigInt): Promise<Bot> {
+export async function getBot(id: string): Promise<Bot> {
   if (!id) throw new Error("No ID provided");
   const res = await fetch(`${BASE_URL}/bots/${id}`);
   const data = await res.json();
@@ -74,7 +74,7 @@ export async function getBot(id: BigInt): Promise<Bot> {
 /**
  * @name postStats
  * @description Post bot stats [Auth Required]
- * @param {BigInt} id - Bot ID
+ * @param {string} id - Bot ID
  * @param {number} guildCount - Guild count
  * @param {number} shardCount - Shard count
  * @param {string} token - Auth token
@@ -82,7 +82,7 @@ export async function getBot(id: BigInt): Promise<Bot> {
  */
 export async function postStats(
   token: string,
-  id: BigInt,
+  id: string,
   guildCount: number,
   shardCount?: number
 ): Promise<BotStats> {

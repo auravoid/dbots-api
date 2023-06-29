@@ -6,8 +6,8 @@ export type BotData = {
 };
 
 export type Bot = {
-  userId: bigint;
-  clientId: bigint;
+  userId: string;
+  clientId: string;
   username: string;
   discriminator: number;
   avatarstring: string;
@@ -35,7 +35,7 @@ export type Bot = {
 export type Owner = {
   username: string;
   discriminator: number;
-  userId: bigint;
+  userId: string;
 };
 
 export type BotStats = {
